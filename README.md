@@ -41,8 +41,9 @@ Setting a breakpoint in the analyze function will allow you to inspect
 all of the queries and their stack traces.
 
 ## TODO
+- [ ] Linting
 - [ ] Tests
-- [ ] Pipeline to test, build, and publish
+- [ ] Pipeline
 
 ## License
 QueryCounter is distributed under the MIT License.
