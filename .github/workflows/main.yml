@@ -2,11 +2,9 @@ name: QueryCounter Publish
 
 on:
   push:
-    branches:
-      - "master"
-      - "pipeline-configuration"
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   registry_package:
     types: [published]
   release:
@@ -20,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.8']
+        python-version: ['3.8', '3.9']
 
     steps:
     - uses: actions/checkout@v2
@@ -41,7 +39,7 @@ jobs:
         python -m pip install build
         python -m build --sdist --wheel
     - name: Publish Package to PyPI
-#      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__
