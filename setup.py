@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='query_counter',
+    name='query-counter',
     version='0.1.0',
     install_requires=['SQLAlchemy>=1.4.31'],
     packages=setuptools.find_namespace_packages(),
