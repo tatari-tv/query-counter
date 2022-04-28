@@ -9,7 +9,9 @@ QueryCounter will provide insights into which model DB calls are made multiple t
 By default, QueryCounter will log results with an optional config to raise an Exception.
 
 ## Installation
-TODO
+```bash
+pip install query-counter
+```
 
 ## Configuration
 TODO
@@ -18,6 +20,8 @@ TODO
 Usage: Create QueryCounter with optional config and `initialize`
 when you would like to start tracking requests:
 ```python
+from query_counter import QueryCounter
+
 query_counter = QueryCounter(session=session, config=query_counter_config)
 query_counter.initialize()
 ```
@@ -43,7 +47,7 @@ all of the queries and their stack traces.
 ## TODO
 - [ ] Linting
 - [ ] Tests
-- [ ] Pipeline
+- [x] Pipeline
 
 ## License
 QueryCounter is distributed under the MIT License.
