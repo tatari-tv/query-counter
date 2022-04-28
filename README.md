@@ -1,4 +1,12 @@
 # QueryCounter
+
+[![QueryCounter Publish](https://github.com/tatari-tv/query-counter/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/tatari-tv/query-counter/actions/workflows/main.yml)
+[![PyPI version](https://badge.fury.io/py/query-counter.svg)](https://badge.fury.io/py/query-counter)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/query-counter.svg)](https://pypi.python.org/pypi/query-counter/)
+[![Downloads](https://pepy.tech/badge/query-counter/month)](https://pepy.tech/project/query-counter)
+[![Downloads](https://static.pepy.tech/personalized-badge/query-counter?period=total&units=international_system&left_color=black&right_color=blue&left_text=Downloads)](https://pepy.tech/project/query-counter)
+[![PyPI license](https://img.shields.io/pypi/l/query-counter.svg)](https://pypi.python.org/pypi/query-counter/)
+
 SQLAlchemy model N+1 debugger.
 
 ## About
