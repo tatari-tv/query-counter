@@ -22,7 +22,7 @@ class Post(Base):
         self.user_id = user_id
         self.message = message
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
             f"<Post('{self.id}')>"
         )
@@ -39,7 +39,7 @@ class User(Base):
     def __init__(self, name):
         self.name = name
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
             f"<User('{self.id}/{self.name}')>"
         )

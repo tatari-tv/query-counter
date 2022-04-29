@@ -6,6 +6,7 @@ import traceback
 import warnings
 from dataclasses import dataclass
 from dataclasses import field
+from typing import List
 
 from sqlalchemy import event
 from sqlalchemy.orm import ORMExecuteState
@@ -87,14 +88,14 @@ class QueryInstance:
         self.config = config
         self.heuristics = self._heuristics() if self.config.heuristics_enabled else []
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         return (
             isinstance(other, self.__class__)
             and self.stack == other.stack
             and str(self.statement) == str(other.statement)
         )
 
-    def __hash__(self):
+    def __hash__(self) -> int:
         return hash((str(self.statement), ''.join(self.stack)))
 
     def _heuristics(self):
@@ -191,21 +192,21 @@ class QueryCounter:
             self.queries[key] = query_instance
 
     @property
-    def sorted_queries(self):
+    def sorted_queries(self) -> List[QueryInstance]:
         '''
         Sort queries by count in descending order
         '''
         return sorted(self.queries.values(), key=lambda x: x.count, reverse=True)
 
     @property
-    def filtered_queries(self):
+    def filtered_queries(self) -> List[QueryInstance]:
         '''
         Filter sorted queries where the count is greater than the
         configured threshold
         '''
         return [q for q in self.sorted_queries if q.count > self.config.alert_threshold]
 
-    def format(self):
+    def format(self) -> str:
         '''
         Format filtered queries for logging
         '''
