@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='query-counter',
-    version='0.3.0',
+    version='0.3.1',
     install_requires=['SQLAlchemy>=1.4.0'],
     packages=setuptools.find_namespace_packages(),
     url='https://github.com/tatari-tv/query-counter',
