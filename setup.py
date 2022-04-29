@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='query-counter',
-    version='0.2.0',
-    install_requires=['SQLAlchemy>=1.4.31'],
+    version='0.3.1',
+    install_requires=['SQLAlchemy>=1.4.0'],
     packages=setuptools.find_namespace_packages(),
     url='https://github.com/tatari-tv/query-counter',
     license='MIT',
@@ -20,6 +20,8 @@ setuptools.setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
     ],
     keywords='query counter debugger n+1 sqlalchemy',
 )

@@ -81,7 +81,7 @@ heuristic_paths: list = field(default_factory=list)
 
 ## TODO
 - [ ] Linting
-- [ ] Tests
+- [x] Tests
 - [x] Pipeline
 
 ## License
