@@ -9,6 +9,8 @@
 
 SQLAlchemy model N+1 debugger.
 
+NOTE: This is a debugging tool that is not meant to be deployed in production.
+
 ## About
 This module will help identify N+1 DB calls made through SQLAlchemy. It takes advantage of the SQLAlchemy event listener for `do_orm_execute`.
 
