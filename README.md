@@ -4,10 +4,12 @@
 [![PyPI version](https://badge.fury.io/py/query-counter.svg)](https://badge.fury.io/py/query-counter)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/query-counter.svg)](https://pypi.python.org/pypi/query-counter/)
 [![Downloads](https://pepy.tech/badge/query-counter/month)](https://pepy.tech/project/query-counter)
-[![Downloads](https://static.pepy.tech/personalized-badge/query-counter?period=total&units=international_system&left_color=black&right_color=blue&left_text=Downloads)](https://pepy.tech/project/query-counter)
+[![Downloads](https://static.pepy.tech/personalized-badge/query-counter?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/query-counter)
 [![PyPI license](https://img.shields.io/pypi/l/query-counter.svg)](https://pypi.python.org/pypi/query-counter/)
 
 SQLAlchemy model N+1 debugger.
+
+NOTE: This is a debugging tool that is not meant to be deployed in production.
 
 ## About
 This module will help identify N+1 DB calls made through SQLAlchemy. It takes advantage of the SQLAlchemy event listener for `do_orm_execute`.
