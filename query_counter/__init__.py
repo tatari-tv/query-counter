@@ -152,7 +152,7 @@ class QueryCounter:
     '''
 
     session: Session | None = None
-    config: QueryAnalysisConfig = QueryAnalysisConfig()
+    config: QueryAnalysisConfig = field(default_factory=QueryAnalysisConfig)
     queries: dict[int, QueryInstance] = field(default_factory=dict)
 
     def __enter__(self):
